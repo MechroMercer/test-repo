@@ -35,9 +35,9 @@ jobs:
         uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
       - run: npm install
-      - working-directory: zad10
+        working-directory: zad10
       - run: npm run build -- --base=/test-repo/
-      - working-directory: zad10
+        working-directory: zad10
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
