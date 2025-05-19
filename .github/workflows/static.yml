@@ -35,12 +35,14 @@ jobs:
         uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
       - run: npm install
-      - run: npm run build -- --base=/test-repo/zad10/
+      - working-directory: zad10
+      - run: npm run build -- --base=/test-repo/
+      - working-directory: zad10
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'dist'
+          path: 'zad10/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
