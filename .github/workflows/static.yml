@@ -37,6 +37,7 @@ jobs:
       - run: npm install tailwindcss @tailwindcss/vite 
         working-directory: zad10
       - run: npm run build -- --base=/test-repo/
+        working-directory: zad10
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
