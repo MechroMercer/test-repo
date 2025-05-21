@@ -34,7 +34,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
-      - run: npm install
+      - run: npm install tailwindcss @tailwindcss/vite 
         working-directory: zad10
       - run: npm run build
         working-directory: zad10
